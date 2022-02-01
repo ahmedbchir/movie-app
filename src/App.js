@@ -56,10 +56,10 @@ function App() {
   }
   return (
     <div className="App">
-      <Search search={search} />
+      <Search search={search} newRate={newRate} />
       <MovieListe
         movies={movies.filter((el) =>
-          el.Title.toLowerCase().includes(searchValue.toLowerCase().trim())
+          el.Rating && el.Title.toLowerCase().includes(searchValue.toLowerCase().trim())
         )}
       />
     </div>
